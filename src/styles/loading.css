@@ -1,0 +1,83 @@
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+    border-radius: 20px;
+}
+
+.skeleton-text {
+    min-width: 200px;
+    height: 5px;
+    margin-bottom: 1rem;
+}
+
+.skeleton-text:last-child {
+    margin-bottom: 0;
+    width: 150px;
+}
+
+.header-img {
+    flex: 1;
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes skeleton-loading {
+
+    0%,
+    100% {
+        background-color: gray;
+    }
+
+    100% {
+        background-color: gainsboro;
+    }
+}
+
+
+.card-container-skeleton {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    align-items: center;
+    position: relative;
+}
+
+
+.card-skeleton {
+    display: flex;
+    padding: 15px;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    align-items: center;
+    min-height: 200px;
+}
+
+.card-skeleton .body-card {
+    flex: 1;
+}
+
+.card-skeleton {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+    main {
+        width: 100%;
+        padding: 0;
+    }
+
+    .card-skeleton {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .card-container-skeleton {
+        display: block;
+    }
+}

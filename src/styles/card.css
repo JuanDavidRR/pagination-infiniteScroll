@@ -1,0 +1,23 @@
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+.card{
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.card-body, 
+.card img{
+    width: 50%;
+}
+
+.card img{
+    min-height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+}
